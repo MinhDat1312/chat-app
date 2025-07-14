@@ -1,64 +1,64 @@
-# 💬 ChatApp – Real-time Chat Application
+# 💬 ChatApp – Ứng dụng Chat Thời Gian Thực
 
-A modern, real-time chat app built with **Spring Boot** and **React**, using **WebSocket** for instant communication. Clean UI, secure auth, and seamless performance.
-
----
-
-## 🚀 Features
-
-- ⚡ **Instant messaging** with WebSocket (STOMP)
-- 🧩 **Room-based chats** – Create & join chat rooms
-- 🛡️ **Secure authentication** – Spring Security integrated
-- 🗃️ **MongoDB** for data persistence
-- 📱 **Responsive UI** – Works great on all devices
-- ⚙️ **Hot reload** with Vite + Gradle for smooth dev experience
+Một ứng dụng chat hiện đại được xây dựng bằng **Spring Boot** và **React**, sử dụng **WebSocket** để nhắn tin thời gian thực. Giao diện hiện đại, xác thực bảo mật, hiệu năng mượt mà.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Tính năng
+
+- ⚡ **Nhắn tin thời gian thực** với WebSocket (STOMP)
+- 🧩 **Phòng chat riêng biệt** – Tạo và tham gia các phòng
+- 🛡️ **Xác thực an toàn** – Tích hợp Spring Security
+- 🗃️ **Lưu trữ dữ liệu với MongoDB**
+- 📱 **Giao diện responsive** – Tương thích mọi thiết bị
+- ⚙️ **Hỗ trợ hot reload** với Vite + Gradle cho trải nghiệm dev mượt mà
+
+---
+
+## 🛠️ Công nghệ sử dụng
 
 ### 🔙 Backend
 
-- Java 21
-- Spring Boot 3.5.3
-- Spring WebSocket + STOMP
-- Spring Security
-- MongoDB
-- Lombok
+- Java 21  
+- Spring Boot 3.5.3  
+- Spring WebSocket + STOMP  
+- Spring Security  
+- MongoDB  
+- Lombok  
 
 ### 🔜 Frontend
 
-- React 19
-- Vite
-- Tailwind CSS
-- Axios
-- STOMP.js
-- React Router
-- React Hot Toast
+- React 19  
+- Vite  
+- Tailwind CSS  
+- Axios  
+- STOMP.js  
+- React Router  
+- React Hot Toast  
 
 ---
 
-## 📋 Prerequisites
+## 📋 Yêu cầu cài đặt
 
-| Tool    | Required Version     |
-| ------- | -------------------- |
-| Java    | 21+                  |
-| Node.js | 18+                  |
-| MongoDB | Local/cloud instance |
-| Git     | Any version          |
+| Công cụ    | Phiên bản yêu cầu        |
+|------------|--------------------------|
+| Java       | 21 trở lên               |
+| Node.js    | 18 trở lên               |
+| MongoDB    | Cài đặt local hoặc cloud |
+| Git        | Bất kỳ phiên bản nào     |
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Cài đặt & Thiết lập
 
-### 1. Clone the Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/MinhDat1312/chat-app.git
 cd chat-app
 ```
 
-### 2. Backend Setup
+### 2. Cài đặt Backend
 
 ```bash
 cd chat-app-backend
@@ -70,9 +70,9 @@ cd chat-app-backend
 gradlew.bat bootRun
 ```
 
-📍 App runs on `http://localhost:8080`
+📍 Ứng dụng sẽ chạy tại `http://localhost:8080`
 
-### 3. Frontend Setup
+### 3. Cài đặt Frontend
 
 ```bash
 cd ../chat-app-frontend
@@ -81,13 +81,13 @@ npm install
 npm run dev
 ```
 
-📍 Frontend runs on `http://localhost:5173`
+📍 Giao diện frontend sẽ chạy tại `http://localhost:5173`
 
 ---
 
-## 🗄️ MongoDB Configuration
+## 🗄️ Cấu hình MongoDB
 
-Edit `application.properties`:
+Chỉnh sửa file `application.properties`:
 
 ```properties
 spring.data.mongodb.uri=mongodb://localhost:27017/chatapp
@@ -95,94 +95,101 @@ spring.data.mongodb.uri=mongodb://localhost:27017/chatapp
 
 ---
 
-## 🧪 Usage Guide
+## 🧪 Hướng dẫn sử dụng
 
-1. Start **backend server** with Spring Boot
-2. Start **frontend server** with Vite
-3. Visit `http://localhost:5173`
-4. **Create or join a room** and start chatting in real-time 🎉
+1. Chạy **server backend** bằng Spring Boot  
+2. Chạy **server frontend** bằng Vite  
+3. Mở trình duyệt và truy cập `http://localhost:5173`  
+4. **Tạo hoặc tham gia phòng chat** và bắt đầu nhắn tin 🎉
 
 ---
 
-## 📁 Project Structure Overview
+## 📁 Cấu trúc dự án
 
 ```
 chat-app/
 ├── chat-app-backend/
-│   ├── src/main/java/.../controller/      # REST & WebSocket endpoints
-│   ├── src/main/java/.../config/          # Security & WebSocket config
-│   ├── src/main/java/.../dto/             # DTO classes
-│   ├── src/main/java/.../entity/          # MongoDB document models
-│   ├── src/main/java/.../repository/      # Mongo repositories
-│   └── application.properties
+│   ├── controller/              # REST & WebSocket endpoint
+│   ├── config/                  # Cấu hình bảo mật & WebSocket
+│   ├── dto/                     # DTO classes
+│   ├── entity/                  # Mô hình MongoDB
+│   ├── repository/              # Repository
+│   └── application.properties   # Cấu hình ứng dụng
 ├── chat-app-frontend/
-│   ├── src/components/                    # UI components
-│   ├── src/pages/                         # Home / Chat pages
-│   ├── src/context/                       # Context API
-│   ├── src/services/                      # Axios-based API calls
-│   ├── src/config/                        # Axios / init configs
-│   ├── src/routes/                        # Routing setup
+│   ├── components/              # Các thành phần UI
+│   ├── pages/                   # Các trang chính
+│   ├── context/                 # State context
+│   ├── services/                # Gọi API
+│   ├── config/                  # Cấu hình Axios, init...
+│   ├── routes/                  # Routing
 │   └── main.jsx / App.jsx / index.css
 ```
 
 ---
 
-## 📦 Deployment
+## 📦 Triển khai (Deployment)
 
 ### 🌐 Frontend – Netlify
 
-- 🚀 https://chat-app-05cdf0.netlify.app/
-- **Deploy tool**: Netlify
-- **Branch deploy**: `main`
-- **Continuous Deployment**: Auto-deploy on every GitHub push
+- 🚀 Triển khai tại:  
+  [https://chat-app-05cdf0.netlify.app/](https://chat-app-05cdf0.netlify.app/)
 
-> ✅ Fast loading with optimized CDN and built-in SSL (HTTPS)
+- 🛠 Công cụ: **Netlify**
+- 🧬 Triển khai tự động khi push GitHub (nhánh `main`)
+
+> ✅ Tốc độ tải nhanh, hỗ trợ CDN & HTTPS mặc định
+
+---
 
 ### 🖥️ Backend – Render
 
-- 🔗 https://chat-app-latest-rcql.onrender.com
-- **Deploy tool**: Render
-- **Auto-deploy**: Auto-deploy on every GitHub push
-- **Database**: Connect to MongoDB Atlas (or local)
+- 🔗 API hoạt động tại:  
+  [https://chat-app-latest-rcql.onrender.com](https://chat-app-latest-rcql.onrender.com)
 
-> ⏳ Render may experience ~30s cold starts when using the free tier.
+- 🛠 Công cụ: **Render**
+- 🔁 Tự động deploy khi push GitHub
+- 🗄️ Sử dụng MongoDB Atlas (hoặc local)
 
-### 🔧 Important: Connection Configuration
+> ⏳ Gói miễn phí Render có thể bị “khởi động chậm” ~30 giây sau khi không hoạt động
+
+---
+
+### 🔧 Kết nối API trong frontend
 
 ```js
-// AxiosHelper.js or .env
+// AxiosHelper.js hoặc file .env
 export const BASE_API = "https://chat-app-latest-rcql.onrender.com";
 const socket = new SockJS(`${BASE_API}/ws`);
 ```
 
 ---
 
-## 🐳 Docker Support
+## 🐳 Hỗ trợ Docker
 
 ```bash
 cd chat-app-backend
 
-# Build image
+# Build Docker image
 docker build -t chat-app-backend .
 
-# Run container
+# Chạy container
 docker run -p 8080:8080 chat-app-backend
 ```
 
 ---
 
-## 🧑‍💻 Development
+## 🧑‍💻 Phát triển
 
-| Task           | Command             |
-| -------------- | ------------------- |
-| Start Backend  | `./gradlew bootRun` |
-| Start Frontend | `npm run dev`       |
-| Build Backend  | `./gradlew build`   |
-| Build Frontend | `npm run build`     |
+| Tác vụ            | Lệnh                     |
+|-------------------|--------------------------|
+| Khởi động Backend | `./gradlew bootRun`      |
+| Khởi động Frontend| `npm run dev`            |
+| Build Backend     | `./gradlew build`        |
+| Build Frontend    | `npm run build`          |
 
 ---
 
-## 📞 Contact
+## 📞 Liên hệ
 
 - 📧 Email: [nguyenthangdat84@gmail.com](mailto:nguyenthangdat84@gmail.com)
 - 🐙 GitHub: [github.com/MinhDat1312](https://github.com/MinhDat1312)
